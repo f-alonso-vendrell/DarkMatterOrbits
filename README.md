@@ -8,7 +8,7 @@ Here you can find the paper in which I describe the Dark Matter interaction with
 
 Simulator consists on a dark matter particle and a the possibility to set several densities for a layered sphere centered in (0,0). 
 
-Simulator can be found [here](https://f-alonso-vendrell.github.io/DarkMatterOrbits/index.html)
+Simulator can be found [here](https://f-alonso-vendrell.github.io/DarkMatterOrbits/CentralForce_Simulation.html)
 
 There are some scenarios you can test:
 
