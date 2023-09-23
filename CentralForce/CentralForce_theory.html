@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<link rel="stylesheet" title="ejs_css" type="text/css" href="../../../_ejs_library/css/ejsPage.css">
+<link rel="stylesheet" title="server_css" type="text/css" href="../../_css/ejsPage.css"><title>EJS Physics 200 Models</title></head>
+<body>
+<h2>Newton's Law of Gravitation</h2><p align="left">One of the most studied central force problems is Newton's universal law of gravitation.&nbsp; This law states that two spherical
+particles of mass M<sub>1 </sub>and M<sub>2</sub>
+attracted each other with a force F<sub>12</sub> that is
+inversely proportional to their separation squared and is directed
+along a line connecting their centers
+</p>
+<p align="center">
+<img src="gravitation_eqn.gif"></p>
+<p align="left">
+The direction of the force on M<sub>1</sub> is indicated by
+a unit vector "r-hat" pointing from M<sub>1 </sub>to M<sub>2</sub>.
+The proportionality constant G depends on the system of units and takes
+the value G = 6.67x10<sup>-11</sup> m<sup>3</sup>/kg<sup>.</sup>s
+in the metric system.
+</p>
+<p align="left">
+Because two gravitationally interacting particles orbit in a plane
+about their common center of mass, we choose a coordinate system
+with the center of mass at the origin.&nbsp; Intermediate mechanics texts show this two-body problem can be reduced to an equivalent one-body problem so this 
+inverse square law model is very general.</p>
+<p align="left">
+Applying Newton's Second Law <b>F</b> = M<sub>1</sub><b>a</b>
+to the orbiting mass and using units such that M<sub>2</sub>G=1
+the acceleration of the orbiting mass becomes
+</p>
+<p align="center">
+<img src="acceleration_eqn.gif"></p>
+<p align="left">
+Rewriting this vector formula using Cartesian components and
+recognizing that sin(<font face="Times New Roman">&#952;</font>)
+= y/r, cos(<font face="Times New Roman">&#952;</font>) =
+x/r, and r = (x<sup>2</sup>+y<sup>2</sup>)<sup>1/2</sup>
+in the plane of the orbit gives the following coupled differential
+equations for input into the Ejs model.
+</p>
+<p align="center">
+<img src="component_eqn.gif"></p>
+</body></html>

@@ -1,0 +1,23 @@
+title: Central Force
+logo-image: CentralForce/orbit.png
+author: Wolfgang Christian
+copyright: 
+author-image: images/WC_logo.png
+main-script: CentralForce_Simulation.js
+main-simulation: CentralForce_Simulation.xhtml
+html-contents: CentralForce_Contents.xhtml
+html-main: CentralForce.xhtml
+page-title: Central Force Orbits
+page-index: CentralForce/CentralForce.html
+page-title: Newton's Law of Gravitation
+page-index: CentralForce/CentralForce_theory.html
+page-title: Central Force
+page-index: CentralForce_Simulation.xhtml
+resource: CentralForce/orbit.png
+resource: images/WC_logo.png
+resource: CentralForce/acceleration_eqn.gif
+resource: CentralForce/CentralForce.html
+resource: CentralForce/CentralForce_theory.html
+resource: CentralForce/component_eqn.gif
+resource: CentralForce/gravitation_eqn.gif
+resource: CentralForce/orbit.jpg
