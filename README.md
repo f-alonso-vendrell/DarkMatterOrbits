@@ -14,10 +14,23 @@ There are some scenarios you can test:
 
 ## Scenario 1 - Non interecting orbits, inverse square force, kepplerian orbit
 
+set p(r<1) to 0.5 other values to cero, everything else default values... you should see a keplerian orbit around it with one of the focus of the ellipse in the center of the sphere.
+
 ## Scenario 2 - Full intersecting orbit in uniform density sphere, linear force, closed orbit
+
+set all p's to the same value (e.g. 0.5), everything else defautl values... you should also see an ellipse, but this time the center of the ellipse is the center of the sphere. This is the same as if an ideal spring is fixed at the center
 
 ## Scenario 3 - Mix, non closed orbit
 
+set all as defaults, you will see the combination of the two abova which causes a non-closed orbit
+
+## Scenario 4 - The hollow planet, zero gravity inside
+
+set all densities to zero except the last one, set p(3<r<4) to 1. You will see that orbit within the hollow space is an straight line.
+
+## Scenario 5 - Play with parameters
+
+Play with densities, parameters, see how the different trajectories. You can also play with the original simulator in [OSP](https://www.compadre.org/osp/EJSS/3561/5.htm?F=1) writting a central force in a continuous way.
 
 # Paper
 
