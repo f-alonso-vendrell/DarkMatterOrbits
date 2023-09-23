@@ -59,7 +59,7 @@ function CentralForce(_topFrame,_libraryPath,_codebasePath) {
     GM = 1; // EjsS Model.Variables.Auxiliary Vars.GM
     xInitial = 4; // EjsS Model.Variables.Auxiliary Vars.xInitial
     vyInitial = 0.5; // EjsS Model.Variables.Auxiliary Vars.vyInitial
-    fstr = "1/r^2"; // EjsS Model.Variables.Auxiliary Vars.fstr
+    fstr = "2"; // EjsS Model.Variables.Auxiliary Vars.fstr FER: changed to 2 as default
   });
 
   _model.addToReset(function() {
@@ -310,6 +310,40 @@ function CentralForce(_topFrame,_libraryPath,_codebasePath) {
         var r2=x*x+y*y;  // distance from origin squared  // > Preliminary code for ODE.Equations:1
         var r=Math.sqrt(r2);  // distance from origin  // > Preliminary code for ODE.Equations:2
         var f = _view.fField.evaluate({r:r});  // > Preliminary code for ODE.Equations:3
+
+
+
+
+        _fer_draw_boundaries();
+
+        console.log("DENSITY READING");
+        console.log(_view.fField.evaluate());
+        console.log(_view.fFieldFER2.evaluate());
+        console.log(_view.fFieldFER3.evaluate());
+        console.log(_view.fFieldFER4.evaluate());
+        
+
+        if ( r >= 3.0){
+        	f=2.0/(r*r);
+        } else {
+        	f=(2.0/27.0)*r
+        }
+
+        var G = 1.0;
+        var mass = _fer_calc_inner_mass(r);
+
+        console.log("Mass"+mass);
+        //console.log(mass);
+
+        f = G * mass / (r*r);
+
+        
+
+        //console.log("FUNCTION");
+        //console.log(f);
+        //console.log("R");
+        //console.log(r);
+
         var ax=-x*f/r;  // > Preliminary code for ODE.Equations:4
         var ay=-y*f/r;  // > Preliminary code for ODE.Equations:5
       // Compute the rate
@@ -325,6 +359,83 @@ function CentralForce(_topFrame,_libraryPath,_codebasePath) {
     __instantiateSolver();
 
     return __odeSelf;
+  }
+
+  function _fer_draw_boundaries(){
+
+  	p1=_view.fField.evaluate();
+  	p2=_view.fFieldFER2.evaluate();
+  	p3=_view.fFieldFER3.evaluate();
+  	p4=_view.fFieldFER4.evaluate();
+
+
+
+	if (p4 != 0.0){
+  		_view.massShapeFER4.setProperty("LineColor","Grey");
+  		_view.massShapeFER4.setProperty("FillColor","Grey");
+  	} else {
+  		_view.massShapeFER4.setProperty("LineColor","None");
+  		_view.massShapeFER4.setProperty("FillColor","None");
+  	}
+    
+	if (p3 != p4){
+  		_view.massShapeFER3.setProperty("LineColor","LightBlue");
+  		_view.massShapeFER3.setProperty("FillColor","LightBlue");
+  	} else {
+  		_view.massShapeFER3.setProperty("LineColor","None");
+  		_view.massShapeFER3.setProperty("FillColor","None");
+  	}
+
+  	if (p2 != p3){
+  		_view.massShapeFER2.setProperty("LineColor","DarkBlue");
+  		_view.massShapeFER2.setProperty("FillColor","DarkBlue");
+  	} else {
+  		_view.massShapeFER2.setProperty("LineColor","None");
+  		_view.massShapeFER2.setProperty("FillColor","None");
+  	}
+
+  	if (p1 != p2){
+  		_view.massShapeFER1.setProperty("LineColor","DarkGrey");
+  		_view.massShapeFER1.setProperty("FillColor","DarkGrey");
+  	} else {
+  		_view.massShapeFER1.setProperty("LineColor","None");
+  		_view.massShapeFER1.setProperty("FillColor","None");
+  	}
+
+
+  }
+
+  function _fer_calc_inner_mass(r) {
+  	var vol = 4.0*3.14159/3.0;
+  	//console.log("vol");
+  	//console.log(vol);
+  	var m = 0;
+  	if (r >= 4.0){
+  		p1=_view.fField.evaluate();
+  		p2=_view.fFieldFER2.evaluate();
+  		p3=_view.fFieldFER3.evaluate();
+  		p4=_view.fFieldFER4.evaluate();
+  		m=vol*(1.0*p1+(8.0-1.0)*p2+(27.0-8.0)*p3+(256.0-27.0)*p4);
+  	} else if (r >= 3.0){
+  		p1=_view.fField.evaluate();
+  		p2=_view.fFieldFER2.evaluate();
+  		p3=_view.fFieldFER3.evaluate();
+  		p4=_view.fFieldFER4.evaluate();
+  		m=vol*(1.0*p1+(8.0-1.0)*p2+(27.0-8.0)*p3+(r*r*r-27.0)*p4);
+  	} else if (r >= 2.0){
+  		p1=_view.fField.evaluate();
+  		p2=_view.fFieldFER2.evaluate();
+  		p3=_view.fFieldFER3.evaluate();
+  		m=vol*(1.0*p1+(8.0-1.0)*p2+(r*r*r-8.0)*p3);
+  	} else if (r >= 1.0){
+  		p1=_view.fField.evaluate();
+  		p2=_view.fFieldFER2.evaluate();
+  		m=vol*(1.0*p1+(r*r*r-1.0)*p2);
+  	} else {
+  		p1=_view.fField.evaluate();
+  		m=vol*(r*r*r*p1);
+  	}
+  	return m;
   }
 
   function _historic_x(__time) {
@@ -434,7 +545,7 @@ function CentralForce_View_0 (_topFrame) {
 
     _view._9(EJSS_INTERFACE.imageAndTextButton,"labelTitle", _view.labelPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'labelTitle'
       .setProperty("Foreground","Blue") // EJsS HtmlView.HtmlView Page: setting property 'Foreground' for element 'labelTitle'
-      .setProperty("Text","<h1>Central Force</h1>") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'labelTitle'
+      .setProperty("Text","<h1>Central Force - Gravitation with varying density spherical layers</h1>") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'labelTitle'
       ;
 
     _view._9(EJSS_INTERFACE.panel,"mainPanel", _view._topFrame) // EJsS HtmlView.HtmlView Page: declaration of element 'mainPanel'
@@ -446,7 +557,7 @@ function CentralForce_View_0 (_topFrame) {
       ;
 
     _view._9(EJSS_INTERFACE.imageAndTextButton,"fLabel", _view.topPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'fLabel'
-      .setProperty("Text"," F(<b>r</b>)  = ") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'fLabel'
+      .setProperty("Text"," p(r&lt;1)  = ") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'fLabel'
       .setProperty("Font","normal 14px ") // EJsS HtmlView.HtmlView Page: setting property 'Font' for element 'fLabel'
       ;
 
@@ -454,6 +565,49 @@ function CentralForce_View_0 (_topFrame) {
       .setProperty("Width",300) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'fField'
       .setProperty("Font","normal normal 14px ") // EJsS HtmlView.HtmlView Page: setting property 'Font' for element 'fField'
       ;
+
+    _view._9(EJSS_INTERFACE.panel,"topPanel2", _view.mainPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'topPanel'
+      .setProperty("CSS",{ "display" : "block"}) // EJsS HtmlView.HtmlView Page: setting property 'CSS' for element 'topPanel'
+      ;
+
+    _view._9(EJSS_INTERFACE.imageAndTextButton,"fLabelFER2", _view.topPanel2) // EJsS HtmlView.HtmlView Page: declaration of element 'fLabel'
+      .setProperty("Text"," p(1&lt;r&lt;2)  = ") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'fLabel'
+      .setProperty("Font","normal 14px ") // EJsS HtmlView.HtmlView Page: setting property 'Font' for element 'fLabel'
+      ;
+
+    _view._9(EJSS_INTERFACE.functionField,"fFieldFER2", _view.topPanel2) // EJsS HtmlView.HtmlView Page: declaration of element 'fField'
+      .setProperty("Width",300) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'fField'
+      .setProperty("Font","normal normal 14px ") // EJsS HtmlView.HtmlView Page: setting property 'Font' for element 'fField'
+      ;
+
+    _view._9(EJSS_INTERFACE.panel,"topPanel3", _view.mainPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'topPanel'
+      .setProperty("CSS",{ "display" : "block"}) // EJsS HtmlView.HtmlView Page: setting property 'CSS' for element 'topPanel'
+      ;
+
+    _view._9(EJSS_INTERFACE.imageAndTextButton,"fLabelFER3", _view.topPanel3) // EJsS HtmlView.HtmlView Page: declaration of element 'fLabel'
+      .setProperty("Text"," p(2&lt;r&lt;3)  = ") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'fLabel'
+      .setProperty("Font","normal 14px ") // EJsS HtmlView.HtmlView Page: setting property 'Font' for element 'fLabel'
+      ;
+
+    _view._9(EJSS_INTERFACE.functionField,"fFieldFER3", _view.topPanel3) // EJsS HtmlView.HtmlView Page: declaration of element 'fField'
+      .setProperty("Width",300) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'fField'
+      .setProperty("Font","normal normal 14px ") // EJsS HtmlView.HtmlView Page: setting property 'Font' for element 'fField'
+      ;
+
+    _view._9(EJSS_INTERFACE.panel,"topPanel4", _view.mainPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'topPanel'
+      .setProperty("CSS",{ "display" : "block"}) // EJsS HtmlView.HtmlView Page: setting property 'CSS' for element 'topPanel'
+      ;
+
+    _view._9(EJSS_INTERFACE.imageAndTextButton,"fLabelFER4", _view.topPanel4) // EJsS HtmlView.HtmlView Page: declaration of element 'fLabel'
+      .setProperty("Text"," p(3 &lt; r &lt; 4)  = ") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'fLabel'
+      .setProperty("Font","normal 14px ") // EJsS HtmlView.HtmlView Page: setting property 'Font' for element 'fLabel'
+      ;
+
+    _view._9(EJSS_INTERFACE.functionField,"fFieldFER4", _view.topPanel4) // EJsS HtmlView.HtmlView Page: declaration of element 'fField'
+      .setProperty("Width",300) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'fField'
+      .setProperty("Font","normal normal 14px ") // EJsS HtmlView.HtmlView Page: setting property 'Font' for element 'fField'
+      ;
+
 
     _view._9(EJSS_INTERFACE.panel,"centerPanel", _view.mainPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'centerPanel'
       ;
@@ -474,6 +628,8 @@ function CentralForce_View_0 (_topFrame) {
       .setProperty("LineWidth",2) // EJsS HtmlView.HtmlView Page: setting property 'LineWidth' for element 'spokeSet'
       ;
 
+      // circles
+
     _view._9(EJSS_DRAWING2D.shapeSet,"radiiSet", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'radiiSet'
       .setProperty("Measured",false) // EJsS HtmlView.HtmlView Page: setting property 'Measured' for element 'radiiSet'
       .setProperty("LineColor","LightGray") // EJsS HtmlView.HtmlView Page: setting property 'LineColor' for element 'radiiSet'
@@ -482,6 +638,53 @@ function CentralForce_View_0 (_topFrame) {
       .setProperty("LineWidth",2) // EJsS HtmlView.HtmlView Page: setting property 'LineWidth' for element 'radiiSet'
       .setProperty("DrawFill",false) // EJsS HtmlView.HtmlView Page: setting property 'DrawFill' for element 'radiiSet'
       ;
+
+      // shields
+
+    _view._9(EJSS_DRAWING2D.shape,"massShapeFER4", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'massShape'
+      .setProperty("FillColor","None")
+      .setProperty("LineColor","None") // EJsS HtmlView.HtmlView Page: setting property 'FillColor' for element 'massShape'
+      .setProperty("SizeX",320) // EJsS HtmlView.HtmlView Page: setting property 'SizeX' for element 'massShape'
+      .setProperty("SizeY",320) // EJsS HtmlView.HtmlView Page: setting property 'SizeY' for element 'massShape'
+      .setProperty("PixelSize",true) // EJsS HtmlView.HtmlView Page: setting property 'PixelSize' for element 'massShape'
+      .setProperty("LineWidth",2)
+      .setProperty("EnabledPosition","ENABLED_ANY") // EJsS HtmlView.HtmlView Page: setting property 'EnabledPosition' for element 'massShape'
+      ;
+
+
+    _view._9(EJSS_DRAWING2D.shape,"massShapeFER3", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'massShape'
+      .setProperty("FillColor","None")
+      .setProperty("LineColor","None") // EJsS HtmlView.HtmlView Page: setting property 'FillColor' for element 'massShape'
+      .setProperty("SizeX",240) // EJsS HtmlView.HtmlView Page: setting property 'SizeX' for element 'massShape'
+      .setProperty("SizeY",240) // EJsS HtmlView.HtmlView Page: setting property 'SizeY' for element 'massShape'
+      .setProperty("PixelSize",true) // EJsS HtmlView.HtmlView Page: setting property 'PixelSize' for element 'massShape'
+      .setProperty("LineWidth",2)
+      .setProperty("EnabledPosition","ENABLED_ANY") // EJsS HtmlView.HtmlView Page: setting property 'EnabledPosition' for element 'massShape'
+      ;
+
+     _view._9(EJSS_DRAWING2D.shape,"massShapeFER2", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'massShape'
+      .setProperty("FillColor","None")
+      .setProperty("LineColor","None") // EJsS HtmlView.HtmlView Page: setting property 'FillColor' for element 'massShape'
+      .setProperty("SizeX",160) // EJsS HtmlView.HtmlView Page: setting property 'SizeX' for element 'massShape'
+      .setProperty("SizeY",160) // EJsS HtmlView.HtmlView Page: setting property 'SizeY' for element 'massShape'
+      .setProperty("PixelSize",true) // EJsS HtmlView.HtmlView Page: setting property 'PixelSize' for element 'massShape'
+      .setProperty("LineWidth",2)
+      .setProperty("EnabledPosition","ENABLED_ANY") // EJsS HtmlView.HtmlView Page: setting property 'EnabledPosition' for element 'massShape'
+      ;
+
+    _view._9(EJSS_DRAWING2D.shape,"massShapeFER1", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'massShape'
+      .setProperty("FillColor","None")
+      .setProperty("LineColor","None") // EJsS HtmlView.HtmlView Page: setting property 'FillColor' for element 'massShape'
+      .setProperty("SizeX",80) // EJsS HtmlView.HtmlView Page: setting property 'SizeX' for element 'massShape'
+      .setProperty("SizeY",80) // EJsS HtmlView.HtmlView Page: setting property 'SizeY' for element 'massShape'
+      .setProperty("PixelSize",true) // EJsS HtmlView.HtmlView Page: setting property 'PixelSize' for element 'massShape'
+      .setProperty("LineWidth",2)
+      .setProperty("EnabledPosition","ENABLED_ANY") // EJsS HtmlView.HtmlView Page: setting property 'EnabledPosition' for element 'massShape'
+      ;
+
+
+
+
 
     _view._9(EJSS_DRAWING2D.shape,"massShape", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'massShape'
       .setProperty("FillColor","Magenta") // EJsS HtmlView.HtmlView Page: setting property 'FillColor' for element 'massShape'
@@ -558,7 +761,7 @@ function CentralForce_View_0 (_topFrame) {
 
     _view._9(EJSS_INTERFACE.panel,"textPanel", _view._topFrame) // EJsS HtmlView.HtmlView Page: declaration of element 'textPanel'
       .setProperty("CSS",{ "display" : "block"}) // EJsS HtmlView.HtmlView Page: setting property 'CSS' for element 'textPanel'
-      .setProperty("Html","<p>The Central Force Model computes the trajectory of a particle  acted on by a central force F(r). The model reads the force F(r) in the user interface and simulation numerically compute the trajectory. </p>") // EJsS HtmlView.HtmlView Page: setting property 'Html' for element 'textPanel'
+      .setProperty("Html","<p>This model is based on The Central Force Model. It computes the trajectory of a particle  acted on by a multi layered (up to 4) gravitational force. The model reads the densitites in the user interface and numerically computes the trajectory. . It only uses the inner mass as per the Shell Theorem. Also G=1 to speed the demo</p>") // EJsS HtmlView.HtmlView Page: setting property 'Html' for element 'textPanel'
       ;
 
   };
