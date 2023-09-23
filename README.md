@@ -34,7 +34,7 @@ Play with densities, parameters, see how the different trajectories. You can als
 
 # Paper
 
-Papers in pdf can be found in this same repository and in [Academia](https://www.academia.edu/105948768/Dark_Matter_orbits_intersecting_dense_Normal_Matter_objects?sm=b)
+Papers in pdf can be found in this [repository](https://f-alonso-vendrell.github.io/DarkMatterOrbits/DarkMatterOrbits.pdf) and in [Academia](https://www.academia.edu/105948768/Dark_Matter_orbits_intersecting_dense_Normal_Matter_objects?sm=b)
 
 A text version is also copied here:
 
