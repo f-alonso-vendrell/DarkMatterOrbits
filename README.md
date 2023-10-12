@@ -55,25 +55,20 @@ As such, this Dark Matter (DM onward) should have little or no electromagnetic, 
 
 The only noticeable effects we can test are gravitational effects DM produces in NM.
 
-Previous gravitational analysis known to the author focus on how dark matter distribution affects known observational data and only dark matter heating [1] in which bursts of NM out of galaxies also alter the distribution of DM to higher orbits
+Previous gravitational analysis known to the author focus on how dark matter distribution affects known observational data and only dark matter heating [1](/DarkMatterOrbits/#1-startswithabang-cold-dark-matter-is-heated-up-by-stars-even-though-it-cannot-feel-them) in which bursts of NM out of galaxies also alter the distribution of DM to higher orbits
 
-Some articles found for general public “What Would Happen If You Became Dark Matter? (2017)”[2] and later “Que se passerait-il si la matière ordinaire qui nous compose était convertie en matière noire? (2018)” [3] present DM particles orbiting within dense objects following Kepler orbits, nevertheless that should not be the case if those hypothetical particles exists as I will show in this paper.
+Some articles found for general public [“What Would Happen If You Became Dark Matter? (2017)”](https://www.forbes.com/sites/startswithabang/2019/02/15/cold-dark-matter-is-heated-up-by-stars-even-though-it-cannot-feel-them/?sh=8783883f1149)[2] and later [“Que se passerait-il si la matière ordinaire qui nous compose était convertie en matière noire? (2018)”](https://trustmyscience.com/que-se-passerait-il-si-la-matiere-ordinaire-qui-nous-compose-etait-convertie-en-matiere-noire/) [3] present DM particles orbiting within dense objects following Kepler orbits, nevertheless that should not be the case if those hypothetical particles exists as I will show in this paper.
 
 ## II.- GLOBAL ASSUMPTIONS
 
 Since this is a simple approach there are some assumptions which align with what is assumed today for DM and dense NM bodies like asteroids, planets or stars:
 
-    • DM only interacts with NM via gravitation.
-      
-    • DM is modeled as one indivisible distribution of mass (in particular it will be a point-like mass). We will refer to the DM particle.
-      
-    • NM object will be modeled as a spherical symmetrical non rotating object hold together by its gravity in equilibrium by electromagnetic forces between the atoms.
-      
-    • The regime of the study will be considered in the low energies so no relativistic effects are relevant (like motion of DM and NM is small, radius of NM object is big in comparison to the Schwarzschild radius…).
-      
-    • The mass of the DM particle is very low in comparison with the mass of the NM object
-      
-    • The DM particle is bounded to the NM object (it has not enough energy to escape to infinite) and there are no other massive objects that affect the analysis
+* DM only interacts with NM via gravitation.
+* DM is modeled as one indivisible distribution of mass (in particular it will be a point-like mass). We will refer to the DM particle.  
+* NM object will be modeled as a spherical symmetrical non rotating object hold together by its gravity in equilibrium by electromagnetic forces between the atoms.
+* The regime of the study will be considered in the low energies so no relativistic effects are relevant (like motion of DM and NM is small, radius of NM object is big in comparison to the Schwarzschild radius…).
+* The mass of the DM particle is very low in comparison with the mass of the NM object      
+* The DM particle is bounded to the NM object (it has not enough energy to escape to infinite) and there are no other massive objects that affect the analysis
 
 ## III. INITIAL ANALYSIS 
 
@@ -83,10 +78,11 @@ This initial analysis cover the case of a DM particle orbiting a NM object witho
 
 In this case the DM orbit is an ellipse with one of the focus in the center of the NM object, this orbit is closed. That scenario is represented in Figure 1. where the NM object is the first circle.
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/78cb029a-cdf1-4b0d-b9c7-f7d81193c2be)
  
 which follows a central force of the form:
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/c2059827-9071-4b82-88f5-59fd6a53842c)
 
 With M being the mass of the NM object, m being the mass of the DM object and G is the Gravitational Constant.
 
@@ -94,14 +90,17 @@ The second scenario is that in which the whole orbit of the DM particle is embed
 
 As a first step we will consider the NM body of uniform density.
 
-In this case we need to take into account the Shell Theorem [4] and only the mass of the sphere centered in the NM object center up limited to the position of the DM particle really accounts for gravitation force, so the inverse square law does not apply and rather as Wikipedia says “inside a solid sphere of constant density, the gravitational force within the object varies linearly with distance from the center, becoming zero by symmetry at the center of mass".
+In this case we need to take into account the Shell Theorem [4] and only the mass of the sphere centered in the NM object center up limited to the position of the DM particle really accounts for gravitation force, so the inverse square law does not apply and rather as Wikipedia says ***“inside a solid sphere of constant density, the gravitational force within the object varies linearly with distance from the center, becoming zero by symmetry at the center of mass".***
 
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/afe5cb2f-b471-4fe7-95a2-d2b28c2b7b8b)
 
 
 Where ρ is the NM object density, m and G same as previous scenario.
 
 That kind of force F=kr is the kind of force a spring exerts on an object and the resulting orbit for it is also an ellipse but this time with the center of the ellipse being the center of the NM object. That scenario is represented in Figure 2. where the NM object covers all the area represented.
+
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/a4f14632-1029-46e5-a8c3-d8ce1d0dd5ba)
 
 
 The third and last scenario in this chapter is that in which we keep the NM object properties but part of the orbit of the DM particle is inside of the NM object while other part is outside of the NM object.
