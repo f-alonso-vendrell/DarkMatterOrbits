@@ -105,6 +105,7 @@ That kind of force F=kr is the kind of force a spring exerts on an object and th
 
 The third and last scenario in this chapter is that in which we keep the NM object properties but part of the orbit of the DM particle is inside of the NM object while other part is outside of the NM object.
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/d8793a01-2483-4461-af75-c4dbea380aba)
 
 
 In this third scenario the central force field is not aligned to either isotropic oscillator or Kepler orbits, and as per Brentand’s Theorem [5] in general (e.g. excluding circular orbits) the orbits will not be closed.
@@ -113,6 +114,7 @@ This third scenario will also be present if we consider the NM body made of laye
 
 An example of such scenario is represented in the following figure in which the radius of the NM object has been set to 3. 
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/575fa233-a829-4916-8f07-4fe557fd7d96)
 
 As we can see there will be a maximum height and maximum depth where the DM particle will be, deviating clearly from the initial version of the articles that triggered the creation of this paper. [2][3]
 
@@ -126,58 +128,58 @@ In this particular case I will cover the effect called Dynamical friction [6] wh
 
 A DM particle that crosses NM object should loose energy in this form, giving part of the DM kinetic energy to compress the NM around it and that work is ultimately converted to heat in the NM.
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/80008797-7779-4f80-ab2b-86501f9e8f91)
 
 Assuming that the work done in an object of mass m by increasing the pressure and keeping temperature constant can be approximated as:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/35326972-6dfb-4fec-9229-f78c44d3ccad)
 
 (taken from stackexchange question [7]) where ΔP = Pf -Pi
 
 We can think about calculating the work done in any section of the NM object perpendicular to the trajectory of the DM object, assuming constant density, compressibility, and low speed, then only we can consider that ΔP, Pi are the values to integrate through the cross sections as the DM particle passes.
 
-
-
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/c7681bf1-41b7-4a9f-a1df-d24f9e4df158)
 
 As an initial approximation we can consider what is the dynamical friction produced by a cylinder of NM of radius R, density ρ, compressibility k with every particle in it affected by an environmental or self-pressure Pi (constant or changing only on the depth within the length of the cylinder) that is traversed by a DM particle of mass m
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/32b3f1ed-c40a-412b-a1d4-43ecd81a0ea4)
 
 Assuming Pi= Constant and to calculate the work done due to the increment of pressure on a dl ring of mass dm we have:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/2fa48f3f-18cd-41ce-8d7b-ee6c228b9150)
 
 with
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/9035e8f9-db46-44c6-8d4d-e6d4bde342ff)
 
 In general the hydro-static equilibrium for a column of liquid can be written for constant density as:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/a5d67b39-a917-4f70-aa3e-fa3139d29a68)
 
 with g being the acceleration at that point, if instead of height we use distance r from a central acceleration due to a mass m of DM we can rewrite the above as:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/95e8da25-94d0-4a3e-b9da-f81e1af89239)
 
 Since we want to check the increment ΔP for the ring will be when the DM particle is at the ring center and we can calculate the hydro static equilibrium due only to that mass with:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/48db85a7-6574-4843-90d9-56f66540efa6)
 
 Integrating the differential then ΔP for the ring of radius r is
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/7c1bafa2-3736-48a0-822c-42c7fa26a32f)
 
 so now the differential of work is:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/603c0700-4847-4cd8-a7ca-c9182e0a731a)
 
 which can be simplified to:
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/5e34bfba-2095-4f74-b47e-fdb9c631193a)
 
 
 Assuming in the vicinity ε of the DM particle is empty space (as it is for distances below the inter atomic distances) we can calculate the work done on a dl section of the cylinder from that empty space to a radius R integrating the rings on dr, we then get:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/e0705db2-0d8b-4224-9695-1ef131fa8277)
 
 Also since the work done compressing the slice comes from DM kinetic energy loss we can estimate the energy and its lost as:
 
@@ -185,41 +187,34 @@ Ek = ½ m v2
 
 As such then the differential lost is given by:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/f63fef07-e07b-4590-a6a8-1d65bd36f9eb)
 
 Equating both expressions we get that:
 
-
-
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/491a1555-29d3-4dad-922c-5d46c99deb2b)
 
 So after a length of cylinder L we get
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/0a9219ba-d98c-43b4-9285-cfe1ff64e574)
 
 
-
-
-
-
-Characteristics
+**Characteristics**
 
 This above formula has the following characteristics:
 
 * It is linearly dependent on the length of the cylinder, its density and its compressibility.
-
 * It is “small” in the sense that it depends on the gravitational constant G
-
 * It has 2 different parts, one depends linearly on the mass of the DM object, only logarithmic on the radius of the cylinder and is double dependent on the gravitational constant G. This term is only significant for large masses. e.g. could be relevant for a black hole of the size of an atom with mass around 10^17Kg.
 
 This part satisfies the velocity squared units, being the logarithm dimensionless:
 
-
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/a173996a-ad2a-4f2e-b166-c6f84cbda20a)
 
 * The second part is independent of the mass of the DM object and has linear dependency on the mass encircling the DM object and the initial pressure to which is subjected to. This term is significant for low mass DM objects that cross large NM objects which already are in hydro-static equilibrium and high pressure under the surface.
 
 This second part also satisfies the velocity squared units:
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/f5e1997d-6b77-4680-ac94-84a4ee746974)
 
 
 * This equation is only physically valid until vf is zero. And it is based on length traversed. 
@@ -245,36 +240,37 @@ m (hypothetical) = 1Kg
 
 Such sphere is under hydro-static equilibrium before the DM particle intersects the NM object, for which we can use the previous differential equation taking into account only the underlying sphere at r (see [10] for sphere is hydro-static equilibrium)
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/b989cbbc-b32b-46bc-a638-ae7cf9e89a2c)
 
-
-
-Can DM particle be trapped by Earth?
+**Can DM particle be trapped by Earth?**
 
 To simplify we will assume the DM particle crosses the sphere passing through its center.
 
 Since we are setting the hypothetical mass of the DM particle to 1Kg the equation of the dynamical friction can be obtained from kinetic and potential energy variations:
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/532919f2-68fa-4a0b-8562-f23ad36b46bb)
 
 
 We can check what would be the incoming velocity so once the DM particle crosses the sphere its velocity is below the escape velocity (11 Km/s).
 
 So integrating between vo and vf, and between r=-R and r=+R we get:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/15186e88-fa76-4727-8723-34ba6adf1585)
 
 which for a cylinder affected of 1mm radius we get a value of 7.66 x10-11 which is quite small to trap any DM particle that is not already gravitationally bounded to the planet.
 
 
-Internal circular DM trajectory
+**Internal circular DM trajectory**
 
 If the DM particle is already gravitationally bounded inside a solid sphere of constant density and for simplicity it is following a circular orbit we can calculate how much the orbit will be shrinking due to dynamical friction.
 
 Following a circular orbit of a radius “r” we know:
 
-
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/b47a2e65-987d-48df-92cc-993b6cad2e7d)
 
 And the circular motion equation inside the planet:
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/f2b142bf-d734-4a2e-a39b-17fd5a712a35)
 
 
 so there is a fixed angular speed independent of the radius which for our NM sphere is
@@ -283,13 +279,15 @@ w=1,24x10-3 rad/seg or a period of 1,4 hours
 
 We can then apply the differential formula for a small cylinder (torus in this case) around the DM particle trajectory
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/134763c6-0e49-464c-a263-3615f6bd3010)
 
 
 in which with the given values we get:
 
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/f6603ce3-ce4b-497e-babb-adb6cfb85431)
 
 
-solving we get θend = 7.31x1018 radians or what is equivalent 1.26x1018 full orbits, each of a period of 1.4 hours it will require 1,86x1014 years or more than 13 thousand times the age of the universe just for the orbit to drop 1m.
+solving we get θend = 7.31x10^18 radians or what is equivalent 1.26x1018 full orbits, each of a period of 1.4 hours it will require 1,86x10^14 years or more than 13 thousand times the age of the universe just for the orbit to drop 1m.
 
 ##        VI. CONCLUSION:
 
