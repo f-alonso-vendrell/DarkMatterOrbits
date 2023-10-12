@@ -319,22 +319,22 @@ I would also like to thank my sisters Rosella Alonso and Claudia Alonso, and my 
 
 ## VIII. - REFERENCES
 
-[1]https://www.forbes.com/sites/startswithabang/2019/02/15/cold-dark-matter-is-heated-up-by-stars-even-though-it-cannot-feel-them/?sh=8783883f1149
+### [1] [Startswithabang: cold-dark-matter-is-heated-up-by-stars-even-though-it-cannot-feel-them](https://www.forbes.com/sites/startswithabang/2019/02/15/cold-dark-matter-is-heated-up-by-stars-even-though-it-cannot-feel-them/?sh=8783883f1149)
 
-[2]https://www.forbes.com/sites/startswithabang/2017/11/02/what-would-happen-if-you-became-dark-matter/?sh=14679ab3fd29 
+### [2] [Startswithabang: what-would-happen-if-you-became-dark-matter](https://www.forbes.com/sites/startswithabang/2017/11/02/what-would-happen-if-you-became-dark-matter/?sh=14679ab3fd29) 
 
-[3]https://trustmyscience.com/que-se-passerait-il-si-la-matiere-ordinaire-qui-nous-compose-etait-convertie-en-matiere-noire/ 
+### [3] [trustmyscience: que-se-passerait-il-si-la-matiere-ordinaire-qui-nous-compose-etait-convertie-en-matiere-noire](https://trustmyscience.com/que-se-passerait-il-si-la-matiere-ordinaire-qui-nous-compose-etait-convertie-en-matiere-noire/) 
 
-[4]https://en.m.wikipedia.org/wiki/Shell_theorem
+### [4] [Wikipedia: Shell_theorem](https://en.m.wikipedia.org/wiki/Shell_theorem)
 
-[5]https://en.wikipedia.org/wiki/Bertrand%27s_theorem
+### [5] [Wikipedia: Bertand's theorem](https://en.wikipedia.org/wiki/Bertrand%27s_theorem)
 
-[6]https://en.wikipedia.org/wiki/Dynamical_friction 
+### [6] [Wikipedia: Dynamical friction](https://en.wikipedia.org/wiki/Dynamical_friction)
 
-[7]https://physics.stackexchange.com/questions/67513/deriving-work-done-on-a-solid
+### [7] [stackexchange: deriving-work-done-on-a-solid](https://physics.stackexchange.com/questions/67513/deriving-work-done-on-a-solid)
 
-[8]https://en.wikipedia.org/wiki/Compressibility 
+### [8] [Wikipedia: Compressibility](https://en.wikipedia.org/wiki/Compressibility)
 
-[9]https://www.compadre.org/osp/items/detail.cfm?ID=12989 
+### [9] [Open Source Physics: Central Force Model](https://www.compadre.org/osp/items/detail.cfm?ID=12989)
 
-[10]https://physics.stackexchange.com/questions/713115/pressure-inside-a-gravitationally-bound-sphere-of-uniform-density
+### [10] [stackexchange: pressure-inside-a-gravitationally-bound-sphere-of-uniform-density](https://physics.stackexchange.com/questions/713115/pressure-inside-a-gravitationally-bound-sphere-of-uniform-density)
