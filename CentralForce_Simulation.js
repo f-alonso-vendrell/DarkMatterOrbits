@@ -415,7 +415,7 @@ function CentralForce(_topFrame,_libraryPath,_codebasePath) {
   		p2=_view.fFieldFER2.evaluate();
   		p3=_view.fFieldFER3.evaluate();
   		p4=_view.fFieldFER4.evaluate();
-  		m=vol*(1.0*p1+(8.0-1.0)*p2+(27.0-8.0)*p3+(256.0-27.0)*p4);
+  		m=vol*(1.0*p1+(8.0-1.0)*p2+(27.0-8.0)*p3+(64.0-27.0)*p4);
   	} else if (r >= 3.0){
   		p1=_view.fField.evaluate();
   		p2=_view.fFieldFER2.evaluate();
