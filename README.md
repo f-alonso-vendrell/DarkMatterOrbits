@@ -8,7 +8,9 @@ Here you can find the paper in which I describe the Dark Matter interaction with
 
 Simulator consists on a dark matter particle and a the possibility to set several densities for a layered sphere centered in (0,0). 
 
-Simulator can be found [here](https://f-alonso-vendrell.github.io/DarkMatterOrbits/CentralForce_Simulation.html)
+Generic Simulator can be found [here](https://f-alonso-vendrell.github.io/DarkMatterOrbits/CentralForce_Simulation.html)
+
+Earth-like Simulator can be found [here](https://f-alonso-vendrell.github.io/DarkMatterOrbits/CentralForce_SimulationEarth.html)
 
 There are some scenarios you can test:
 
@@ -34,7 +36,7 @@ Play with densities, parameters, see how the different trajectories. You can als
 
 # Paper
 
-Papers in pdf can be found in this [repository](https://f-alonso-vendrell.github.io/DarkMatterOrbits/DarkMatterOrbitsV2.pdf) and in [Academia](https://www.academia.edu/105948768/Dark_Matter_orbits_intersecting_dense_Normal_Matter_objects?sm=b)
+Papers in pdf can be found in this [repository](https://f-alonso-vendrell.github.io/DarkMatterOrbits/DarkMatterOrbitsV3.pdf) and in [Academia](https://www.academia.edu/105948768/Dark_Matter_orbits_intersecting_dense_Normal_Matter_objects?sm=b)
 
 A text version is also copied here:
 
@@ -42,7 +44,7 @@ A text version is also copied here:
 Dark Matter orbits intersecting dense Normal Matter objects
 
 Fernando Alonso Vendrell
-(Aug 13th- Oct 6th , 2023)
+v3 (Aug 13th- Oct 21st , 2023)
 
 I present a simple analysis of the orbits of dark matter particle or clump of particles should follow when crossing a dense normal matter object such as a planet or a star. This simple analysis should serve to correct existing publications and could be used a starting point for a more detailed analysis which will require better modeling of the dark matter and the dense normal matter object.
 
@@ -57,7 +59,9 @@ The only noticeable effects we can test are gravitational effects DM produces in
 
 Previous gravitational analysis known to the author focus on how dark matter distribution affects known observational data and only dark matter heating [1](/DarkMatterOrbits/#1-startswithabang-cold-dark-matter-is-heated-up-by-stars-even-though-it-cannot-feel-them) in which bursts of NM out of galaxies also alter the distribution of DM to higher orbits
 
-Some articles found for general public [“What Would Happen If You Became Dark Matter? (2017)”](https://www.forbes.com/sites/startswithabang/2019/02/15/cold-dark-matter-is-heated-up-by-stars-even-though-it-cannot-feel-them/?sh=8783883f1149)[2] and later [“Que se passerait-il si la matière ordinaire qui nous compose était convertie en matière noire? (2018)”](https://trustmyscience.com/que-se-passerait-il-si-la-matiere-ordinaire-qui-nous-compose-etait-convertie-en-matiere-noire/) [3] present DM particles orbiting within dense objects following Kepler orbits, nevertheless that should not be the case if those hypothetical particles exists as I will show in this paper.
+As of version 3 of this paper it has come to the author knowledge of the Doctoral Thesis by Marina Cermeño Gavilán titled “Dark matter in dense astrophysical objects” [11] and referenced papers in it, which covers more extreme scenarios and theoretical interactions other than gravity and don’t cover this more simpler case.
+
+Some articles found for general public [“What Would Happen If You Became Dark Matter? (2017)”](https://www.forbes.com/sites/startswithabang/2017/11/02/what-wouldhappen-if-you-became-dark-matter/?sh=14679ab3fd29)[2] and later [“Que se passerait-il si la matière ordinaire qui nous compose était convertie en matière noire? (2018)”](https://trustmyscience.com/que-se-passerait-il-si-la-matiere-ordinaire-qui-nous-compose-etait-convertie-en-matiere-noire/) [3] present DM particles orbiting within dense objects following Kepler orbits, nevertheless that should not be the case if those hypothetical particles exists as I will show in this paper.
 
 ## II.- GLOBAL ASSUMPTIONS
 
@@ -117,6 +121,40 @@ An example of such scenario is represented in the following figure in which the 
 ![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/575fa233-a829-4916-8f07-4fe557fd7d96)
 
 As we can see there will be a maximum height and maximum depth where the DM particle will be, deviating clearly from the initial version of the articles that triggered the creation of this paper. [2][3]
+
+**What will be the effect in a layered sphere?**
+
+It could be argued that due to differences in density, growing the deeper in the sphere, that will divert from the previous approach to more like a Keplerian orbit, nevertheless there are 2 ways to analyze that.
+
+Theoretically, we can compare the effects of a Dirac δ of density at r=0 (Keplerian orbits) with that of a density that goes from a minimum (at r=NM object radius) to a maximum (at r=0). Knowing the radius of the NM object, the maximum density, the minimum density and the total mass, and assuming density increases or is kept equal as r decreases we can the derive the density distribution that is closer to that Dirac δ at r=0, being it a 2 layered distribution with maximum density in one inner layer and another outer layer of minimum density. We can the calculate the inter-layer radius Rif
+
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/0009c2f6-1982-41b2-87f0-c47d8d1b96c1)
+
+For earth as per earthhow.com  [12] the density of the different layers can be approximated to:
+
+* Crust:		 	2.5 g/cm3
+* Upper Mantle: 	4g/cm3
+* Lower Mantle:	5g/cm3
+* Outer Core:		11g/cm3
+* Inner Core:		13g/cm3
+
+So with density varying between 13g/cm3 to 2.5g/cm3 and with a radius of 6371 km and total mass of 5,97·1024 we get that the best approximation to a Dirac δ  of density would be where there are only two layers with a Rif at 4202 km, being this the closest to Keplerian orbit it can get.
+
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/b97cf794-f728-4da4-8c45-1ae82f958fba)
+
+Alternative via simulation [13], we can create a layered model of constant densities within each layer, and sizes of each layer proportional to earth’s and actually see the possible orbits.
+
+For that purpose a different simulations can be run.
+
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/088ec52f-d38b-4d2a-9863-68a73cd323bb)
+
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/2e765084-6ad3-4eef-8c43-d8966960d4f3)
+
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/6ebf1c3c-8d69-43b3-8f7e-793f9596ce54)
+
+Only when there is no crossing with the NM object the orbit becomes a Keplerian closed orbit.
+
+![imagen](https://github.com/f-alonso-vendrell/DarkMatterOrbits/assets/11774221/f4075f8f-48de-45e8-8d86-f78bd37e1563)
 
 ## IV.- DYNAMICAL FRICTION EFFECTS
 
@@ -304,6 +342,8 @@ This paper was initially triggered by an article in “starts with a bang” in 
 
 I have done some search in Arxiv ( https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=Dark+Matter&terms-0-field=all&terms-1-operator=AND&terms-1-term=Orbit&terms-1-field=title&classification-physics=y&classification-physics_archives=astro-ph&classification-include_cross_list=include&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)  or Google about this topic and haven’t found any article about these two particular topics.
 
+As of version 3 of this paper I acknowledge the Doctoral Thesis by Marina Cermeño Gavilán titled “Dark matter in dense astrophysical objects”, although the topic of the Thesis covers other scenarios, that is the first academia paper found by the author on the topic.
+
 Nevertheless, it is very likely that this topic has already be presented before this paper, should that be the case, I recognize credit of it to whoever did it before me and I present apologies to not referencing it in this version.
 
 Additionally, I have based the model on a limited set of information (mostly Wikipedia), Nicholas Wheeler Central Force Probleams,  Ethan Siegel, and Wolfgang Cristian for the central force simulator [9] which I used and modified to show 3rd diagram, I would like to thank all the authors for the time taken to provide such useful information.
@@ -335,3 +375,9 @@ I would also like to thank my sisters Rosella Alonso and Claudia Alonso, and my 
 ### [9] [Open Source Physics: Central Force Model](https://www.compadre.org/osp/items/detail.cfm?ID=12989)
 
 ### [10] [stackexchange: pressure-inside-a-gravitationally-bound-sphere-of-uniform-density](https://physics.stackexchange.com/questions/713115/pressure-inside-a-gravitationally-bound-sphere-of-uniform-density)
+
+### [11] [Doctoral Thesis](https://gredos.usal.es/handle/10366/140378)
+
+### [12] [Earthhow density of earth layers](https://earthhow.com/density-of-earth/)
+
+### [13] [Earth simulator](https://f-alonso-vendrell.github.io/DarkMatterOrbits/CentralForce_SimulationEarth.html)
