@@ -2,7 +2,7 @@
 
 Repo for Dark Matter orbits crossing Normal Matter objects until better repo is found
 
-Here you can find the paper in which I describe the Dark Matter interaction with dense normal matter objects and a simulator in which you can configure a layered sphere setting densitiy on each of the layers to validate the hypothetical dark matter particle trajectory
+Here you can find the paper in which I describe the Dark Matter interaction with dense normal matter objects and a simulator in which you can configure a layered sphere setting density on each of the layers to validate the hypothetical dark matter particle trajectory
 
 # Simulator
 
@@ -10,29 +10,29 @@ Simulator consists on a dark matter particle and a the possibility to set severa
 
 Generic Simulator can be found [here](https://f-alonso-vendrell.github.io/DarkMatterOrbits/CentralForce_Simulation.html)
 
-Earth-like Simulator can be found [here](https://f-alonso-vendrell.github.io/DarkMatterOrbits/CentralForce_SimulationEarth.html)
+Earth-like Simulator can be found [here](https://f-alonso-vendrell.github.io/DarkMatterOrbits/CentralForce_SimulationEarth.html) and has data already set with relative densities and radius as that of the Earth.
 
-There are some scenarios you can test:
+For the first simulator there are some scenarios you can test:
 
-## Scenario 1 - Non interecting orbits, inverse square force, kepplerian orbit
+## Scenario 1 - Non intersecting orbits, inverse square force, kepplerian orbit
 
 set p(r<1) to 0.5 other values to cero, everything else default values... you should see a keplerian orbit around it with one of the focus of the ellipse in the center of the sphere.
 
 ## Scenario 2 - Full intersecting orbit in uniform density sphere, linear force, closed orbit
 
-set all p's to the same value (e.g. 0.5), everything else defautl values... you should also see an ellipse, but this time the center of the ellipse is the center of the sphere. This is the same as if an ideal spring is fixed at the center
+set all p's to the same value (e.g. 0.5), everything else default values... you should also see an ellipse, but this time the center of the ellipse is the center of the sphere. This is the same as if an ideal spring is fixed at the center
 
 ## Scenario 3 - Mix, non closed orbit
 
-set all as defaults, you will see the combination of the two abova which causes a non-closed orbit
+set all as defaults, you will see the combination of the two above which causes a non-closed orbit
 
 ## Scenario 4 - The hollow planet, zero gravity inside
 
-set all densities to zero except the last one, set p(3<r<4) to 1. You will see that orbit within the hollow space is an straight line.
+set all densities to zero except the last one, set p(3<r<4) to 1. You will see that orbit within the hollow space is a straight line.
 
 ## Scenario 5 - Play with parameters
 
-Play with densities, parameters, see how the different trajectories. You can also play with the original simulator in [OSP](https://www.compadre.org/osp/EJSS/3561/5.htm?F=1) writting a central force in a continuous way.
+Play with densities, parameters, see how the different trajectories. You can also play with the original simulator in [OSP](https://www.compadre.org/osp/EJSS/3561/5.htm?F=1) writing a central force in a continuous way.
 
 # Paper
 
@@ -61,7 +61,7 @@ Previous gravitational analysis known to the author focus on how dark matter dis
 
 As of version 3 of this paper it has come to the author knowledge of the Doctoral Thesis by Marina Cermeño Gavilán titled “Dark matter in dense astrophysical objects” [11] and referenced papers in it, which covers more extreme scenarios and theoretical interactions other than gravity and don’t cover this more simpler case.
 
-Some articles found for general public [“What Would Happen If You Became Dark Matter? (2017)”](https://www.forbes.com/sites/startswithabang/2017/11/02/what-wouldhappen-if-you-became-dark-matter/?sh=14679ab3fd29)[2] and later [“Que se passerait-il si la matière ordinaire qui nous compose était convertie en matière noire? (2018)”](https://trustmyscience.com/que-se-passerait-il-si-la-matiere-ordinaire-qui-nous-compose-etait-convertie-en-matiere-noire/) [3] present DM particles orbiting within dense objects following Kepler orbits, nevertheless that should not be the case if those hypothetical particles exists as I will show in this paper.
+Some articles found for general public [“What Would Happen If You Became Dark Matter? (2017)”](https://www.forbes.com/sites/startswithabang/2017/11/02/what-would-happen-if-you-became-dark-matter/?sh=14679ab3fd29) [2] and later [“Que se passerait-il si la matière ordinaire qui nous compose était convertie en matière noire? (2018)”](https://trustmyscience.com/que-se-passerait-il-si-la-matiere-ordinaire-qui-nous-compose-etait-convertie-en-matiere-noire/) [3] present DM particles orbiting within dense objects following Kepler orbits, nevertheless that should not be the case if those hypothetical particles exists as I will show in this paper.
 
 ## II.- GLOBAL ASSUMPTIONS
 
